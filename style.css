@@ -1,0 +1,49 @@
+body {
+	container: presentation;
+
+	padding: 0;
+	margin: 0;
+
+	display: grid;
+	height: 100vh;
+	grid-template-rows: min-content auto min-content;
+}
+
+:fullscreen {
+	background: white;
+}
+
+main {
+	overflow: scroll;
+	padding: 1rem;
+}
+
+header {
+	background: lightgray;
+	padding: 1rem;
+
+	h1 { margin: 0; font-size: 1rem; font-weight: normal; }
+}
+
+footer {
+	background: lightgray;
+	padding: 1rem;
+}
+
+@container presentation style(--presentation: true) {
+	.hidden-presentation {
+		display: none;
+	}
+}
+
+.active { display: block; }
+.inactive { display: none; }
+
+.presenter-notes {
+	display: none;
+}
+
+#presenter-notes {
+	max-height: 50vh;
+	overflow: scroll;
+}
